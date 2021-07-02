@@ -1,0 +1,31 @@
+Get the JSON object from a JSON string
+In this example, we require to retrieve the first JSON object from the [employees] key.
+
+A variable @data contains an array for the “employees” key
+We can note the array is enclosed in a square bracket
+JSON array follows zero-based indexing. To retrieve the first record, we use employees[0] argument
+Similarly, we can access the second record using the employees[1] argument
+
+DECLARE @data NVARCHAR(4000);
+SET @data = N'{
+"employees":
+[      {
+         "name":"Raj",
+         "email":"raj@gmail.com",
+         "age":32
+          
+},
+      {
+         "name":"Mohan",
+         "email":"Mohan@yahoo.com",
+         "age":21
+          
+        }   
+]
+}';
+SELECT JSON_QUERY(@data, '$.employees[0]') AS 'Result';
+It retrieves the first JSON object and gives you the following output.
+{
+         "name":"Raj",
+         "email":"raj@gmail.com",
+         "age":32
