@@ -1,3 +1,4 @@
+I used JSON_QUERY() function to retrieve the JSON object and array from JSON data
 Get the JSON object from a JSON string
 In this example, we require to retrieve the first JSON object from the [employees] key.
 
